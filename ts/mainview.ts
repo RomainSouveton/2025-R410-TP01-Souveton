@@ -2,15 +2,16 @@ export class MainView {
     result: HTMLDivElement
     link: HTMLButtonElement
     select: HTMLSelectElement
-    input: HTMLInputElement
+    input: HTMLTextAreaElement
     addBtn: HTMLButtonElement
 
     constructor() {
         this.result = document.getElementById('result') as HTMLDivElement;
         this.link = document.getElementById('clear') as HTMLButtonElement;
-        this.input = document.getElementById('html') as HTMLInputElement;
+        this.input = document.getElementById('html') as HTMLTextAreaElement;
         this.select = document.getElementById('type') as HTMLSelectElement;
         this.link.addEventListener("click", () => this.clearResult());
+        
         this.addBtn = document.getElementById('ok') as HTMLButtonElement;
         this.addBtn.addEventListener("click", () => this.ClickAddTexte());
     }
